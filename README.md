@@ -22,5 +22,6 @@ Danh sách các biến môi trường cần thiết cho dự án:
 - `SUPABASE_ACCESS_TOKEN`
 - `SUPABASE_DB_PASSWORD`
 - `SUPABASE_ORGANIZATION_ID`
+- `SUPABASE_PROJECT_ID`
 - `SUPABASE_REGION`
 - `TF_API_TOKEN`
