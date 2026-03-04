@@ -7,6 +7,10 @@ data "doppler_secrets" "this" {
   config  = var.DOPPLER_CONFIG
 }
 
+provider "cloudflare" {
+  api_token = data.doppler_secrets.this.map["CLOUDFLARE_API_TOKEN"]
+}
+
 provider "mongodbatlas" {
   public_key  = data.doppler_secrets.this.map["MONGODB_ATLAS_PUBLIC_KEY"]
   private_key = data.doppler_secrets.this.map["MONGODB_ATLAS_PRIVATE_KEY"]

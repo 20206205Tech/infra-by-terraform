@@ -13,6 +13,11 @@ terraform {
       version = "1.21.1"
     }
 
+    cloudflare = {
+      source  = "cloudflare/cloudflare"
+      version = "~> 4.0"
+    }
+
     mongodbatlas = {
       source  = "mongodb/mongodbatlas"
       version = "~> 1.16.0"
