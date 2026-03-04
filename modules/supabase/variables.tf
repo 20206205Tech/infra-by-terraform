@@ -7,4 +7,8 @@ variable "doppler_secrets_map" {
 variable "project_names" {
   type        = map(string)
   description = "Map of Supabase project names to create"
+  default = {
+    dev  = "project-DEV"
+    prod = "project-PROD"
+  }
 }

@@ -7,4 +7,5 @@ variable "doppler_secrets_map" {
 variable "domain_name" {
   type        = string
   description = "Tên miền chính trên Cloudflare"
+  default     = "20206205.tech"
 }
