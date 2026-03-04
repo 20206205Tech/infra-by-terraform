@@ -17,3 +17,8 @@ module "neon" {
   source              = "./modules/neon"
   doppler_secrets_map = data.doppler_secrets.this.map
 }
+
+module "heroku" {
+  source              = "./modules/heroku"
+  doppler_secrets_map = data.doppler_secrets.this.map
+}

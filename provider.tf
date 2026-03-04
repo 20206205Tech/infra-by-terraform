@@ -23,3 +23,12 @@ provider "supabase" {
 provider "neon" {
   api_key = data.doppler_secrets.this.map["NEON_API_KEY"]
 }
+
+provider "heroku" {
+  email   = data.doppler_secrets.this.map["HEROKU_EMAIL"]
+  api_key = data.doppler_secrets.this.map["HEROKU_API_KEY"]
+}
+
+provider "herokux" {
+  api_key = data.doppler_secrets.this.map["HEROKU_API_KEY"]
+}
