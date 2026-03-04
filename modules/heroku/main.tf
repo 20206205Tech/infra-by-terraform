@@ -36,11 +36,11 @@ resource "herokux_app_github_integration" "this" {
   ]
 }
 
-# Bật lại formation để dyno có thể start (đặc biệt quan trọng với stack = "container")
-resource "heroku_formation" "this" {
-  app_id     = heroku_app.this.id
-  type       = "web"
-  quantity   = 1
-  size       = "basic"
-  depends_on = [heroku_app.this]
-}
+# # Bật lại formation để dyno có thể start (đặc biệt quan trọng với stack = "container")
+# resource "heroku_formation" "this" {
+#   app_id     = heroku_app.this.id
+#   type       = "web"
+#   quantity   = 1
+#   size       = "basic"
+#   depends_on = [heroku_app.this]
+# }
