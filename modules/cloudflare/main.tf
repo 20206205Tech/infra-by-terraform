@@ -49,7 +49,7 @@ resource "cloudflare_record" "be_ai_heroku" {
   zone_id = data.cloudflare_zone.domain.id
   name    = "be-ai"
   type    = "CNAME"
-  content = "young-stingray-mv2fva7vru4vz8nsxf0ocq5n.herokudns.com"
+  content = var.heroku_dns_target
   proxied = true
   ttl     = 1
 }
