@@ -27,5 +27,10 @@ terraform {
       source  = "supabase/supabase"
       version = "~> 1.0"
     }
+
+    neon = {
+      source  = "kislerdm/neon"
+      version = "~> 0.6.0"
+    }
   }
 }

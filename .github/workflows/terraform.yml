@@ -3,13 +3,21 @@ name: Terraform Pipeline
 on:
   push:
     branches: [main]
+    # paths:
+    #   - "terraform/**"
   pull_request:
     branches: [main]
+    # paths:
+    #   - "terraform/**"
 
 jobs:
   terraform:
     name: Terraform Workflow
     runs-on: ubuntu-latest
+
+    # defaults:
+    #   run:
+    #     working-directory: ./terraform
 
     env:
       TF_PLUGIN_CACHE_DIR: ${{ github.workspace }}/.terraform.d/plugin-cache
@@ -25,13 +33,13 @@ jobs:
       - name: Create Terraform Plugin Cache Dir
         run: mkdir -p ${{ env.TF_PLUGIN_CACHE_DIR }}
 
-      # - name: Cache Terraform Providers
-      #   uses: actions/cache@v4
-      #   with:
-      #     path: ${{ env.TF_PLUGIN_CACHE_DIR }}
-      #     key: ${{ runner.os }}-terraform-${{ hashFiles('terraform/.terraform.lock.hcl') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-terraform-
+      - name: Cache Terraform Providers
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.TF_PLUGIN_CACHE_DIR }}
+          key: ${{ runner.os }}-terraform-${{ hashFiles('terraform/.terraform.lock.hcl') }}
+          restore-keys: |
+            ${{ runner.os }}-terraform-
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3

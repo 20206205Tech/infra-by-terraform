@@ -19,3 +19,7 @@ provider "mongodbatlas" {
 provider "supabase" {
   access_token = data.doppler_secrets.this.map["SUPABASE_ACCESS_TOKEN"]
 }
+
+provider "neon" {
+  api_key = data.doppler_secrets.this.map["NEON_API_KEY"]
+}
