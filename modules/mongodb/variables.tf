@@ -7,4 +7,5 @@ variable "doppler_secrets_map" {
 variable "project_names" {
   type        = list(string)
   description = "List of MongoDB project names to create"
+  default     = ["project-DEV", "project-PROD"]
 }
