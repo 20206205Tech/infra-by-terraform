@@ -9,6 +9,8 @@ Danh sách các biến môi trường cần thiết cho dự án:
 - `DOPPLER_ENVIRONMENT`
 - `DOPPLER_PROJECT`
 - `DOPPLER_TOKEN`
+- `GOOGLE_CLIENT_ID`
+- `GOOGLE_CLIENT_SECRET`
 - `HEROKU_API_KEY`
 - `HEROKU_EMAIL`
 - `MONGODB_ATLAS_ORG_ID`
