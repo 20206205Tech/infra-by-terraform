@@ -8,8 +8,6 @@ on:
     #   - "terraform/**"
   pull_request:
     branches: [main]
-    # paths:
-    #   - "terraform/**"
 
 jobs:
   terraform:
