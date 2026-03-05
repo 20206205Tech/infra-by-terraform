@@ -2,10 +2,6 @@ resource "heroku_app" "this" {
   name   = var.app_name
   region = var.app_region
   stack  = var.app_stack
-
-  config_vars = {
-    DOCKER_BUILDKIT = "1"
-  }
 }
 
 resource "heroku_domain" "this" {
@@ -31,7 +27,7 @@ resource "herokux_pipeline_github_integration" "this" {
 resource "herokux_app_github_integration" "this" {
   app_id      = heroku_app.this.uuid
   branch      = var.github_branch
-  auto_deploy = true
+  auto_deploy = false
   wait_for_ci = false
 
   depends_on = [
@@ -39,9 +35,6 @@ resource "herokux_app_github_integration" "this" {
     herokux_pipeline_github_integration.this
   ]
 }
-
-
-
 
 # # Bật lại formation để dyno có thể start (đặc biệt quan trọng với stack = "container")
 # resource "heroku_formation" "this" {
