@@ -5,6 +5,7 @@ Danh sách các biến môi trường cần thiết cho dự án:
 - `CLOUDFLARE_ACCOUNT_ID`
 - `CLOUDFLARE_API_TOKEN`
 - `CLOUDFLARE_ZONE_ID`
+- `DATABASE_URL`
 - `DOPPLER_CONFIG`
 - `DOPPLER_ENVIRONMENT`
 - `DOPPLER_PROJECT`
