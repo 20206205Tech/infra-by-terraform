@@ -16,5 +16,8 @@ variable "projects" {
 
     "dev-be-ai",
     "prod-be-ai",
+
+    "dev-crawl-data-thuvienphapluat",
+    "prod-crawl-data-thuvienphapluat",
   ]
 }
