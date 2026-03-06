@@ -19,5 +19,8 @@ variable "projects" {
 
     "dev-crawl-data-thuvienphapluat",
     "prod-crawl-data-thuvienphapluat",
+
+    "dev-crawl-data-vbpl",
+    "prod-crawl-data-vbpl",
   ]
 }
