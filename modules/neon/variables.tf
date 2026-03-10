@@ -21,6 +21,10 @@ variable "projects" {
     # "prod-crawl-data-thuvienphapluat",
 
     "dev-crawl-data-vbpl",
-    "prod-crawl-data-vbpl",
+    # "prod-crawl-data-vbpl",
+
+    
+    "crawl-data-vbpl",
+    "crawl-data-luatvietnam",
   ]
 }
