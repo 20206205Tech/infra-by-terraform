@@ -17,10 +17,13 @@ variable "projects" {
     "dev-be-ai",
     "prod-be-ai",
 
-
-
-
     "crawl-data-vbpl",
     "crawl-data-luatvietnam",
+
+    "dev-crawl-data-vbpl",
+    "prod-crawl-data-vbpl",
+
+    "dev-crawl-data-luatvietnam",
+    "prod-crawl-data-luatvietnam",
   ]
 }
