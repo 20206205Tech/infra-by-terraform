@@ -14,6 +14,8 @@ Danh sách các biến môi trường cần thiết cho dự án:
 - `DOPPLER_TOKEN`
 - `GOOGLE_CLIENT_ID`
 - `GOOGLE_CLIENT_SECRET`
+- `GOOGLE_DRIVE_FOLDER_ID`
+- `GOOGLE_DRIVE_TOKEN`
 - `HEROKU_API_KEY`
 - `HEROKU_APP_NAME`
 - `HEROKU_EMAIL`
