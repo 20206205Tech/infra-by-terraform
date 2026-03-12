@@ -15,15 +15,15 @@ variable "projects" {
     # "prod-api-gateway-http-log",
 
     "dev-be-ai",
-    "prod-be-ai",
-
-    # "crawl-data-vbpl",
-    # "crawl-data-luatvietnam",
+    "prod-be-ai", 
 
     "dev-crawl-data-vbpl",
     "prod-crawl-data-vbpl",
 
     "dev-crawl-data-luatvietnam",
     "prod-crawl-data-luatvietnam",
+
+    "dev-crawl-data-thuvienphapluat",
+    "prod-crawl-data-thuvienphapluat",
   ]
 }
