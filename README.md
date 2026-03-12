@@ -48,6 +48,7 @@ Danh sách các biến môi trường cần thiết cho dự án:
 - `MONGODB_DB_PASSWORD`
 - `NEON_API_KEY`
 - `NEON_ORGANIZATION_ID`
+- `NGHIA_TEST`
 - `R2_ACCESS_KEY_ID`
 - `R2_BUCKET_NAME`
 - `R2_SECRET_ACCESS_KEY`
