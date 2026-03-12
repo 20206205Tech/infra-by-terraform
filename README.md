@@ -54,7 +54,6 @@ Danh sách các biến môi trường cần thiết cho dự án:
 - `R2_ACCESS_KEY_ID`
 - `R2_BUCKET_NAME`
 - `R2_SECRET_ACCESS_KEY`
-- `ROTATING_PROXY_LIST`
 - `SUPABASE_ACCESS_TOKEN`
 - `SUPABASE_ANON_KEY`
 - `SUPABASE_DB_PASSWORD`
