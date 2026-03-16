@@ -3,8 +3,3 @@ variable "doppler_secrets_map" {
   sensitive   = true
   description = "Doppler secrets passed from root module"
 }
-
-variable "topic_name" {
-  type    = string
-  default = "events"
-}
