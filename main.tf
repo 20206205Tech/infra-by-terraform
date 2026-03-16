@@ -30,3 +30,8 @@ module "aiven" {
   source              = "./modules/aiven"
   doppler_secrets_map = data.doppler_secrets.this.map
 }
+
+module "upstash" {
+  source              = "./modules/upstash"
+  doppler_secrets_map = data.doppler_secrets.this.map
+}

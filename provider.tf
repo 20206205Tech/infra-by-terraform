@@ -36,3 +36,8 @@ provider "herokux" {
 provider "aiven" {
   api_token = data.doppler_secrets.this.map["AIVEN_TOKEN"]
 }
+
+provider "upstash" {
+  email   = data.doppler_secrets.this.map["UPSTASH_EMAIL"]
+  api_key = data.doppler_secrets.this.map["UPSTASH_API_KEY"]
+}
