@@ -25,3 +25,8 @@ module "neon" {
   source              = "./modules/neon"
   doppler_secrets_map = data.doppler_secrets.this.map
 }
+
+module "aiven" {
+  source              = "./modules/aiven"
+  doppler_secrets_map = data.doppler_secrets.this.map
+}

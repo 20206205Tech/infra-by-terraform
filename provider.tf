@@ -32,3 +32,7 @@ provider "heroku" {
 provider "herokux" {
   api_key = data.doppler_secrets.this.map["HEROKU_API_KEY"]
 }
+
+provider "aiven" {
+  api_token = data.doppler_secrets.this.map["AIVEN_TOKEN"]
+}

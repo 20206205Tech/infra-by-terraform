@@ -36,5 +36,9 @@ terraform {
       source  = "davidji99/herokux"
       version = "~> 0.0"
     }
+    aiven = {
+      source  = "aiven/aiven"
+      version = ">= 4.0.0"
+    }
   }
 }
