@@ -24,3 +24,12 @@ resource "aiven_kafka" "kafka_srv" {
     }
   }
 }
+
+
+resource "aiven_kafka_topic" "test_topic" {
+  project      = aiven_project.this.project
+  service_name = aiven_kafka.kafka_srv.service_name
+  topic_name   = "test-events"
+  partitions   = 3
+  replication  = 2
+}
