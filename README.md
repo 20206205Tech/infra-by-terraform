@@ -75,6 +75,8 @@ Danh sách các biến môi trường cần thiết cho dự án:
 - `SUPABASE_REGION`
 - `SUPABASE_SERVICE_ROLE_KEY`
 - `TF_API_TOKEN`
+- `UPSTASH_API_KEY`
+- `UPSTASH_EMAIL`
 - `VNPAY_API_URL`
 - `VNPAY_HASH_SECRET_KEY`
 - `VNPAY_PAYMENT_URL`
