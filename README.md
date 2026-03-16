@@ -2,6 +2,8 @@
 
 Danh sách các biến môi trường cần thiết cho dự án:
 
+- `AIVEN_PARENT_ID`
+- `AIVEN_TOKEN`
 - `CLOUDFLARE_ACCOUNT_ID`
 - `CLOUDFLARE_API_TOKEN`
 - `CLOUDFLARE_ZONE_ID`
