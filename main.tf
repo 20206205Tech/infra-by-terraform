@@ -35,3 +35,7 @@ module "upstash" {
   source              = "./modules/upstash"
   doppler_secrets_map = data.doppler_secrets.this.map
 }
+module "langsmith" {
+  source              = "./modules/langsmith"
+  doppler_secrets_map = data.doppler_secrets.this.map
+}
