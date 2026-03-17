@@ -44,5 +44,9 @@ terraform {
       source  = "upstash/upstash"
       version = "2.1.0"
     }
+    langsmith = {
+      source  = "bogware/langsmith"
+      version = "~> 0.8.0"
+    }
   }
 }

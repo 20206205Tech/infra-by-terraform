@@ -41,3 +41,7 @@ provider "upstash" {
   email   = data.doppler_secrets.this.map["UPSTASH_EMAIL"]
   api_key = data.doppler_secrets.this.map["UPSTASH_API_KEY"]
 }
+
+provider "langsmith" {
+  api_key = data.doppler_secrets.this.map["LANGSMITH_API_KEY"]
+}
