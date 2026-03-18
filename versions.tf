@@ -48,9 +48,9 @@ terraform {
       source  = "bogware/langsmith"
       version = "~> 0.8.0"
     }
-    checkly = {
-      source  = "checkly/checkly"
-      version = "~> 1.17.0"
+terracurl = {
+      source  = "devops-rob/terracurl"
+      version = "1.1.0"
     }
   }
 }

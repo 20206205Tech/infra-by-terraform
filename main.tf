@@ -40,7 +40,7 @@ module "langsmith" {
   doppler_secrets_map = data.doppler_secrets.this.map
 }
 
-module "checkly" {
-  source              = "./modules/checkly"
+module "tasks" {
+  source              = "./modules/tasks"
   doppler_secrets_map = data.doppler_secrets.this.map
 }
