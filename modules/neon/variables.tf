@@ -8,7 +8,7 @@ variable "projects" {
   type        = list(string)
   description = "Danh sách tên các project Neon cần tạo"
   default = [
-    # "dev-test-everything",
+    "dev-test-everything",
 
     "dev-api-gateway",
     "prod-api-gateway",
