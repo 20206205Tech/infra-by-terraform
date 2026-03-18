@@ -45,3 +45,7 @@ provider "upstash" {
 provider "langsmith" {
   api_key = data.doppler_secrets.this.map["LANGSMITH_API_KEY"]
 }
+
+provider "cronjoborg" {
+  api_key = data.doppler_secrets.this.map["CRONJOB_ORG_API_KEY"]
+}

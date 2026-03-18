@@ -48,5 +48,9 @@ terraform {
       source  = "bogware/langsmith"
       version = "~> 0.8.0"
     }
+    cronjoborg = {
+      source  = "plain-insure/cronjoborg"
+      version = "~> 1.0"
+    }
   }
 }

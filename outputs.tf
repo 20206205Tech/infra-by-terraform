@@ -78,3 +78,11 @@ output "upstash_qstash_topic" {
   value       = module.upstash.topic_name
   description = "Tên Topic QStash trên Upstash"
 }
+
+# ==========================================
+# CRONJOB ORG OUTPUTS
+# ==========================================
+output "cron_job_summary" {
+  value       = module.cron_jobs.cron_job_ids
+  description = "IDs của các tác vụ lập lịch trên cron-job.org"
+}

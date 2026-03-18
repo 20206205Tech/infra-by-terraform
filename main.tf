@@ -39,3 +39,8 @@ module "langsmith" {
   source              = "./modules/langsmith"
   doppler_secrets_map = data.doppler_secrets.this.map
 }
+
+module "cron_jobs" {
+  source = "./modules/job"
+  doppler_secrets_map = data.doppler_secrets.this.map
+}
