@@ -45,3 +45,8 @@ provider "upstash" {
 provider "langsmith" {
   api_key = data.doppler_secrets.this.map["LANGSMITH_API_KEY"]
 }
+
+provider "checkly" {
+  api_key    = data.doppler_secrets.this.map["CHECKLY_API_KEY"]
+  account_id = data.doppler_secrets.this.map["CHECKLY_ACCOUNT_ID"]
+}

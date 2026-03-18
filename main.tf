@@ -39,3 +39,8 @@ module "langsmith" {
   source              = "./modules/langsmith"
   doppler_secrets_map = data.doppler_secrets.this.map
 }
+
+module "checkly" {
+  source              = "./modules/checkly"
+  doppler_secrets_map = data.doppler_secrets.this.map
+}
