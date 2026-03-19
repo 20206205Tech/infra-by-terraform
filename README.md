@@ -56,6 +56,9 @@ Danh sách các biến môi trường cần thiết cho dự án:
 - `KONG_PROXY_ERROR_LOG`
 - `KONG_PROXY_LISTEN`
 - `LANGSMITH_API_KEY`
+- `LANGSMITH_ENDPOINT`
+- `LANGSMITH_PROJECT`
+- `LANGSMITH_TRACING`
 - `MONGODB_ATLAS_ORG_ID`
 - `MONGODB_ATLAS_PRIVATE_KEY`
 - `MONGODB_ATLAS_PUBLIC_KEY`
@@ -64,6 +67,7 @@ Danh sách các biến môi trường cần thiết cho dự án:
 - `NEON_ORGANIZATION_ID`
 - `NGHIA_TEST`
 - `NVIDIA_API_KEY`
+- `OPENAI_API_KEY`
 - `PAT`
 - `R2_ACCESS_KEY_ID`
 - `R2_BUCKET_NAME`
