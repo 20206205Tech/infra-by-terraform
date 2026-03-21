@@ -44,6 +44,7 @@ Danh sách các biến môi trường cần thiết cho dự án:
 - `HEROKU_API_KEY`
 - `HEROKU_APP_NAME`
 - `HEROKU_EMAIL`
+- `HF_TOKEN`
 - `KONG_ADMIN_ACCESS_LOG`
 - `KONG_ADMIN_ERROR_LOG`
 - `KONG_ADMIN_GUI_LISTEN`
