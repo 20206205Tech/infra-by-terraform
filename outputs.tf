@@ -23,14 +23,27 @@ output "supabase_full_details" {
 # ==========================================
 # CLOUDFLARE OUTPUTS
 # ==========================================
-output "cloudflare_tunnel_id" {
-  value       = module.cloudflare.tunnel_id
-  description = "ID của Zero Trust Tunnel"
+# output "cloudflare_tunnel_id" {
+#   value       = module.cloudflare.tunnel_id
+#   description = "ID của Zero Trust Tunnel"
+# }
+
+# output "cloudflare_tunnel_cname" {
+#   value       = module.cloudflare.tunnel_cname
+#   description = "Đường dẫn CNAME tới Cloudflare Tunnel"
+# }
+
+
+output "cloudflare_colab_tunnel_token" {
+  value       = module.cloudflare.colab_tunnel_token
+  description = "Token dùng cho Google Colab"
+  sensitive   = true
 }
 
-output "cloudflare_tunnel_cname" {
-  value       = module.cloudflare.tunnel_cname
-  description = "Đường dẫn CNAME tới Cloudflare Tunnel"
+output "cloudflare_main_tunnel_token" {
+  value       = module.cloudflare.main_tunnel_token
+  description = "Token dùng cho Server chính"
+  sensitive   = true
 }
 
 # ==========================================

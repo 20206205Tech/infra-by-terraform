@@ -1,17 +1,11 @@
-# 1. Tạo Secret mới
-resource "random_password" "colab_tunnel_secret" {
-  length = 64
-}
 
-# 2. Tạo Tunnel mới
 resource "cloudflare_zero_trust_tunnel_cloudflared" "colab_tunnel" {
   account_id = var.doppler_secrets_map["CLOUDFLARE_ACCOUNT_ID"]
   name       = "google-colab-tunnel"
-  secret     = base64encode(random_password.colab_tunnel_secret.result)
+  secret     = base64encode(var.doppler_secrets_map["CLOUDFLARE_TUNNEL_SECRET"])
   config_src = "cloudflare"
 }
 
-# 3. Cấu hình cho Tunnel mới
 resource "cloudflare_zero_trust_tunnel_cloudflared_config" "colab_config" {
   account_id = cloudflare_zero_trust_tunnel_cloudflared.colab_tunnel.account_id
   tunnel_id  = cloudflare_zero_trust_tunnel_cloudflared.colab_tunnel.id
@@ -27,7 +21,7 @@ resource "cloudflare_zero_trust_tunnel_cloudflared_config" "colab_config" {
   }
 }
 
-# 4. DNS Record cho Tunnel mới
+
 resource "cloudflare_record" "colab_dns" {
   zone_id = data.cloudflare_zone.domain.id
   name    = "colab"
