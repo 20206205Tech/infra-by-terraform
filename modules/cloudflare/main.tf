@@ -32,7 +32,7 @@ resource "cloudflare_record" "api_render" {
 
 # Lệnh tự động tạo R2 Bucket
 resource "cloudflare_r2_bucket" "vbpl_data" {
-  account_id = cloudflare_zero_trust_tunnel_cloudflared.my_tunnel.account_id
+  account_id = cloudflare_zero_trust_tunnel_cloudflared.localhost_tunnel.account_id
   name       = "crawl-data-vbpl"
   location   = "APAC"
 }

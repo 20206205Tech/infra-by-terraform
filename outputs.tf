@@ -40,8 +40,8 @@ output "cloudflare_colab_tunnel_token" {
   sensitive   = true
 }
 
-output "cloudflare_main_tunnel_token" {
-  value       = module.cloudflare.main_tunnel_token
+output "cloudflare_localhost_tunnel_token" {
+  value       = module.cloudflare.localhost_tunnel_token
   description = "Token dùng cho Server chính"
   sensitive   = true
 }
