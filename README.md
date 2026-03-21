@@ -33,6 +33,7 @@ Danh sách các biến môi trường cần thiết cho dự án:
 - `DOPPLER_ENVIRONMENT`
 - `DOPPLER_PROJECT`
 - `DOPPLER_TOKEN`
+- `GEMINI_API_KEY`
 - `GOOGLE_CLIENT_ID`
 - `GOOGLE_CLIENT_SECRET`
 - `GOOGLE_DRIVE_FOLDER_ID`
