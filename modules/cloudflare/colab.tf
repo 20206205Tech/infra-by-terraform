@@ -19,7 +19,7 @@ resource "cloudflare_zero_trust_tunnel_cloudflared_config" "colab_config" {
   config {
     ingress_rule {
       hostname = "colab.${var.domain_name}"
-      service  = "http://localhost:18080"
+      service  = "http://localhost:11434"
     }
     ingress_rule {
       service = "http_status:404"
