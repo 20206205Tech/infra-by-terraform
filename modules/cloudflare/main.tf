@@ -1,21 +1,15 @@
-# infra-by-terraform/modules/cloudflare/main.tf
-
 data "cloudflare_zone" "domain" {
   name = var.domain_name
 }
 
-# Tạo mật khẩu ngẫu nhiên cho Tunnel
-resource "random_password" "tunnel_secret" {
-  length = 64
-}
 
-# Cấu hình Zero Trust Tunnel
 resource "cloudflare_zero_trust_tunnel_cloudflared" "my_tunnel" {
   account_id = var.doppler_secrets_map["CLOUDFLARE_ACCOUNT_ID"]
   name       = "${replace(var.domain_name, ".", "")}-tunnel"
-  secret     = base64encode(random_password.tunnel_secret.result)
+  secret     = base64encode(var.doppler_secrets_map["CLOUDFLARE_TUNNEL_SECRET"])
   config_src = "cloudflare"
 }
+
 
 # Cấu hình Routing cho Tunnel
 resource "cloudflare_zero_trust_tunnel_cloudflared_config" "my_tunnel_config" {
