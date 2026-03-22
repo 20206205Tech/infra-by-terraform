@@ -10,8 +10,8 @@ variable "projects" {
   default = [
     "dev-api-gateway",
     "prod-api-gateway",
-    # "dev-api-gateway-http-log",
-    # "prod-api-gateway-http-log",
+    "dev-api-gateway-http-log",
+    "prod-api-gateway-http-log",
 
     "dev-be-ai",
     "prod-be-ai",
@@ -26,13 +26,13 @@ variable "projects" {
 
 
 
-    # "dev-data-pipeline-vbpl",
-    # "prod-data-pipeline-vbpl",
+    "dev-data-pipeline-vbpl",
+    "prod-data-pipeline-vbpl",
 
 
 
-    # "dev-vector-database",
-    # "prod-vector-database",
+    "dev-vector-database",
+    "prod-vector-database",
 
 
     "dev-everything",
