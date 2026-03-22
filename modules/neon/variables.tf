@@ -26,7 +26,7 @@ variable "projects" {
 
 
 
-    # "dev-data-pipeline-vbpl",
+    "dev-data-pipeline-vbpl",
     "prod-data-pipeline-vbpl",
 
 
