@@ -34,17 +34,17 @@ output "supabase_full_details" {
 # }
 
 
-output "cloudflare_colab_tunnel_token" {
-  value       = module.cloudflare.colab_tunnel_token
-  description = "Token dùng cho Google Colab"
-  sensitive   = true
-}
+# output "cloudflare_colab_tunnel_token" {
+#   value       = module.cloudflare.colab_tunnel_token
+#   description = "Token dùng cho Google Colab"
+#   sensitive   = true
+# }
 
-output "cloudflare_localhost_tunnel_token" {
-  value       = module.cloudflare.localhost_tunnel_token
-  description = "Token dùng cho Server chính"
-  sensitive   = true
-}
+# output "cloudflare_localhost_tunnel_token" {
+#   value       = module.cloudflare.localhost_tunnel_token
+#   description = "Token dùng cho Server chính"
+#   sensitive   = true
+# }
 
 # ==========================================
 # MONGODB OUTPUTS
