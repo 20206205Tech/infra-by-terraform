@@ -26,17 +26,17 @@ variable "projects" {
 
 
 
-    # "dev-data-pipeline-vbpl",
-    # "prod-data-pipeline-vbpl",
+    "dev-data-pipeline-vbpl",
+    "prod-data-pipeline-vbpl",
 
 
 
-    # "dev-vector-database",
-    # "prod-vector-database",
+    "dev-vector-database",
+    "prod-vector-database",
 
 
-    # "dev-everything",
-    # "prod-everything",
+    "dev-everything",
+    "prod-everything",
 
   ]
 }
