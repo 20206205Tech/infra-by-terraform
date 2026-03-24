@@ -10,8 +10,9 @@ variable "projects" {
   default = [
     "dev-api-gateway",
     "prod-api-gateway",
-    # "dev-api-gateway-http-log",
-    # "prod-api-gateway-http-log",
+    
+    "dev-api-gateway-http-log",
+    "prod-api-gateway-http-log",
 
     "dev-be-ai",
     "prod-be-ai",
