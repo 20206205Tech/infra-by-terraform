@@ -25,6 +25,7 @@ Danh sách các biến môi trường cần thiết cho dự án:
 - `CRONJOB_ORG_API_KEY`
 - `DATA_PIPELINE_VBPL_DATABASE_URL`
 - `DATABASE_URL`
+- `DEBUG`
 - `DECK_LOG_BEARER_TOKEN`
 - `DOCKER_BUILDKIT`
 - `DOMAIN`
