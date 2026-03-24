@@ -87,6 +87,8 @@ Danh sách các biến môi trường cần thiết cho dự án:
 - `UPSTASH_API_KEY`
 - `UPSTASH_EMAIL`
 - `VECTOR_DATABASE_URL`
+- `VERCEL_CNAME`
+- `VERCEL_TOKEN`
 - `VNPAY_API_URL`
 - `VNPAY_HASH_SECRET_KEY`
 - `VNPAY_PAYMENT_URL`
