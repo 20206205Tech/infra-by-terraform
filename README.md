@@ -84,6 +84,7 @@ Danh sách các biến môi trường cần thiết cho dự án:
 - `SFTP_PORT`
 - `SFTP_USERNAME`
 - `SHARE_HOSTING_DB_PASSWORD`
+- `SHARE_HOSTING_MYSQL`
 - `SHARE_HOSTING_PASSWORD`
 - `SHARE_HOSTING_URL`
 - `SHARE_HOSTING_USERNAME`
@@ -101,4 +102,3 @@ Danh sách các biến môi trường cần thiết cho dự án:
 - `VERCEL_CNAME`
 - `VERCEL_TOKEN`
 - `VNPAY_API_URL`
-- `VNPAY_HASH_SECRET_KEY`
