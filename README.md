@@ -76,6 +76,7 @@ Danh sách các biến môi trường cần thiết cho dự án:
 - `NVIDIA_API_KEY`
 - `OPENAI_API_KEY`
 - `PAT`
+- `PINECONE_API_KEY`
 - `R2_ACCESS_KEY_ID`
 - `R2_BUCKET_NAME`
 - `R2_SECRET_ACCESS_KEY`
@@ -101,4 +102,3 @@ Danh sách các biến môi trường cần thiết cho dự án:
 - `VECTOR_DATABASE_URL`
 - `VERCEL_CNAME`
 - `VERCEL_TOKEN`
-- `VNPAY_API_URL`
