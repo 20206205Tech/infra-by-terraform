@@ -10,19 +10,18 @@ variable "projects" {
   default = [
     "dev-api-gateway",
     "prod-api-gateway",
-    
+
     "dev-api-gateway-http-log",
     "prod-api-gateway-http-log",
 
     "dev-be-ai",
     "prod-be-ai",
 
-    "dev-crawl-data-vbpl",
-    "prod-crawl-data-vbpl",
+    # "dev-crawl-data-vbpl",
+    # "prod-crawl-data-vbpl",
 
     "dev-crawl-data-luatvietnam",
     "prod-crawl-data-luatvietnam",
-
 
 
 
@@ -32,8 +31,10 @@ variable "projects" {
 
 
 
-    "dev-vector-database",
-    "prod-vector-database",
+    # "dev-vector-database",
+    # "prod-vector-database",
+
+    # chat_history
 
 
     "dev-everything",
