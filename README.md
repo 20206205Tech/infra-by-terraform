@@ -4,8 +4,6 @@ Danh sách các biến môi trường cần thiết cho dự án:
 
 - `AIVEN_PARENT_ID`
 - `AIVEN_TOKEN`
-- `CHECKLY_ACCOUNT_ID`
-- `CHECKLY_API_KEY`
 - `CLOUDFLARE_ACCOUNT_ID`
 - `CLOUDFLARE_API_TOKEN`
 - `CLOUDFLARE_TUNNEL_SECRET`
@@ -102,3 +100,5 @@ Danh sách các biến môi trường cần thiết cho dự án:
 - `VECTOR_DATABASE_URL`
 - `VERCEL_CNAME`
 - `VERCEL_TOKEN`
+- `VNPAY_API_URL`
+- `VNPAY_HASH_SECRET_KEY`
