@@ -60,7 +60,6 @@ Danh sách các biến môi trường cần thiết cho dự án:
 - `NGHIA_TEST`
 - `NODE_ENV`
 - `NVIDIA_API_KEY`
-- `OPENAI_API_KEY`
 - `PAT`
 - `PINECONE_API_KEY`
 - `R2_ACCESS_KEY_ID`
