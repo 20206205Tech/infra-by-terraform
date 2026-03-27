@@ -1,8 +1,11 @@
+resource "random_password" "colab_tunnel_secret" {
+  length = 64
+}
 
 resource "cloudflare_zero_trust_tunnel_cloudflared" "colab_tunnel" {
   account_id = var.doppler_secrets_map["CLOUDFLARE_ACCOUNT_ID"]
   name       = "google-colab-tunnel"
-  secret     = base64encode(var.doppler_secrets_map["CLOUDFLARE_TUNNEL_SECRET"])
+  secret     = base64encode(random_password.colab_tunnel_secret.result)
   config_src = "cloudflare"
 }
 
@@ -25,7 +28,6 @@ resource "cloudflare_zero_trust_tunnel_cloudflared_config" "colab_config" {
   }
 }
 
-
 resource "cloudflare_record" "colab_dns" {
   zone_id = data.cloudflare_zone.domain.id
   name    = "colab"
@@ -33,6 +35,7 @@ resource "cloudflare_record" "colab_dns" {
   content = "${cloudflare_zero_trust_tunnel_cloudflared.colab_tunnel.id}.cfargotunnel.com"
   proxied = true
 }
+
 resource "cloudflare_record" "webhook_dns" {
   zone_id = data.cloudflare_zone.domain.id
   name    = "webhook"

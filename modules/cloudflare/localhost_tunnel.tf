@@ -1,8 +1,11 @@
+resource "random_password" "localhost_tunnel_secret" {
+  length = 64
+}
 
 resource "cloudflare_zero_trust_tunnel_cloudflared" "localhost_tunnel" {
   account_id = var.doppler_secrets_map["CLOUDFLARE_ACCOUNT_ID"]
   name       = "localhost-tunnel"
-  secret     = base64encode(var.doppler_secrets_map["CLOUDFLARE_TUNNEL_SECRET"])
+  secret     = base64encode(random_password.localhost_tunnel_secret.result)
   config_src = "cloudflare"
 }
 
