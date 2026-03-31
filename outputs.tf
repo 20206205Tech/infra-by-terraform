@@ -49,10 +49,10 @@ output "cloudflare_localhost_tunnel_token" {
 # ==========================================
 # MONGODB OUTPUTS
 # ==========================================
-output "mongodb_clusters" {
-  value       = module.mongodb.mongodb_cluster_ids
-  description = "Danh sách ID của các cluster MongoDB"
-}
+# output "mongodb_clusters" {
+#   value       = module.mongodb.mongodb_cluster_ids
+#   description = "Danh sách ID của các cluster MongoDB"
+# }
 
 # ==========================================
 # NEON OUTPUTS
