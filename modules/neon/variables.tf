@@ -17,8 +17,10 @@ variable "projects" {
     "dev-be-ai",
     "prod-be-ai",
 
-    # "dev-crawl-data-vbpl",
-    # "prod-crawl-data-vbpl",
+
+    "dev-code-be-ai",
+    "prod-code-be-ai",
+
 
     "dev-crawl-data-luatvietnam",
     "prod-crawl-data-luatvietnam",
@@ -31,8 +33,6 @@ variable "projects" {
 
 
 
-    # "dev-vector-database",
-    # "prod-vector-database",
 
     # chat_history
 
