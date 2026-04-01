@@ -48,5 +48,9 @@ terraform {
       source  = "bogware/langsmith"
       version = "~> 0.8.0"
     }
+    oci = {
+      source  = "oracle/oci"
+      version = "~> 5.0"
+    }
   }
 }

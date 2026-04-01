@@ -45,3 +45,11 @@ provider "upstash" {
 provider "langsmith" {
   api_key = data.doppler_secrets.this.map["LANGSMITH_API_KEY"]
 }
+
+provider "oci" {
+  tenancy_ocid = data.doppler_secrets.this.map["OCI_TENANCY_OCID"]
+  user_ocid    = data.doppler_secrets.this.map["OCI_USER_OCID"]
+  fingerprint  = data.doppler_secrets.this.map["OCI_FINGERPRINT"]
+  private_key  = data.doppler_secrets.this.map["OCI_PRIVATE_KEY"]
+  region       = data.doppler_secrets.this.map["OCI_REGION"]
+}
