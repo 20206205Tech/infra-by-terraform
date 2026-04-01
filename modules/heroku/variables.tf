@@ -6,7 +6,7 @@ variable "doppler_secrets_map" {
 
 variable "app_name" {
   type    = string
-  default = "code-fastapi-be-ai"
+  default = "code-be-ai"
 }
 
 variable "app_region" {
@@ -26,7 +26,7 @@ variable "domain_name" {
 
 variable "github_org_repo" {
   type    = string
-  default = "20206205Tech/code-fastapi-be-ai"
+  default = "20206205Tech/code-be-ai"
 }
 
 variable "github_branch" {
