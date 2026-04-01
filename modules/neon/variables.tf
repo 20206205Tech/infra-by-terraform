@@ -14,8 +14,12 @@ variable "projects" {
     "dev-api-gateway-http-log",
     "prod-api-gateway-http-log",
 
-    # "dev-be-ai",
-    # "prod-be-ai",
+    "dev-be-ai",
+    "prod-be-ai",
+
+
+    "dev-code-be-ai",
+    "prod-code-be-ai",
 
 
     "dev-crawl-data-luatvietnam",
