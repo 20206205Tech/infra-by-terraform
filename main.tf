@@ -8,7 +8,7 @@ module "cloudflare" {
   doppler_secrets_map = data.doppler_secrets.this.map
 
   # Lấy output heroku_dns_target từ module heroku truyền vào
-  heroku_dns_target = module.heroku.heroku_dns_target
+  # heroku_dns_target = module.heroku.heroku_dns_target
 }
 
 module "mongodb" {
