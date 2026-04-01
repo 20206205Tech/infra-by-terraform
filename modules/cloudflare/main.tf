@@ -33,7 +33,7 @@ resource "cloudflare_record" "api_render" {
 # Lệnh tự động tạo R2 Bucket
 resource "cloudflare_r2_bucket" "vbpl_data" {
   account_id = var.doppler_secrets_map["CLOUDFLARE_ACCOUNT_ID"]
-  name       = "user_documents"
+  name       = "user-documents"
   location   = "APAC"
 }
 
