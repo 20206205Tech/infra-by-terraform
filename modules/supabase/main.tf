@@ -37,9 +37,9 @@ resource "supabase_settings" "this" {
     site_url = "https://20206205.tech"
 
 
-    uri_allow_list = [
+    uri_allow_list = join(",", [
       "https://20206205.tech/auth/callback",
       "http://localhost:3000/auth/callback"
-    ]
+    ])
   })
 }
