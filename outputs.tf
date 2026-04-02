@@ -7,18 +7,18 @@
 # }
 
 # ==========================================
-# SUPABASE OUTPUTS
-# ==========================================
-output "supabase_project_urls" {
-  value       = module.supabase.supabase_urls
-  description = "Danh sách URL của các project Supabase"
-}
+# # SUPABASE OUTPUTS
+# # ==========================================
+# output "supabase_project_urls" {
+#   value       = module.supabase.supabase_urls
+#   description = "Danh sách URL của các project Supabase"
+# }
 
-output "supabase_full_details" {
-  value       = module.supabase.project_details
-  description = "Toàn bộ thông tin cấu hình Supabase (Sensitive)"
-  sensitive   = true
-}
+# output "supabase_full_details" {
+#   value       = module.supabase.project_details
+#   description = "Toàn bộ thông tin cấu hình Supabase (Sensitive)"
+#   sensitive   = true
+# }
 
 # ==========================================
 # CLOUDFLARE OUTPUTS
