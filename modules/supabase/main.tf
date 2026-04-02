@@ -1,3 +1,16 @@
+locals {
+  project_configs = {
+    "dev" = {
+      site_url     = "http://localhost:3000"
+      redirect_url = "http://localhost:3000/auth/callback"
+    }
+    "prod" = {
+      site_url     = "https://20206205.tech"
+      redirect_url = "https://20206205.tech/auth/callback"
+    }
+  }
+}
+
 resource "supabase_project" "this" {
   for_each = var.project_names
 
@@ -21,9 +34,6 @@ data "supabase_pooler" "this" {
   project_ref = each.value.id
 }
 
-
-
-
 resource "supabase_settings" "this" {
   for_each = supabase_project.this
 
@@ -34,12 +44,7 @@ resource "supabase_settings" "this" {
     external_google_client_id = var.doppler_secrets_map["GOOGLE_CLIENT_ID"]
     external_google_secret    = var.doppler_secrets_map["GOOGLE_CLIENT_SECRET"]
 
-    site_url = "https://20206205.tech"
-
-
-    uri_allow_list = join(",", [
-      "https://20206205.tech/auth/callback",
-      "http://localhost:3000/auth/callback"
-    ])
+    site_url       = local.project_configs[each.key].site_url
+    uri_allow_list = local.project_configs[each.key].redirect_url
   })
 }
