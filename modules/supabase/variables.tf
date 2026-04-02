@@ -8,7 +8,7 @@ variable "project_names" {
   type        = map(string)
   description = "Map of Supabase project names to create"
   default = {
-    dev  = "project-DEV"
-    prod = "project-PROD"
+    dev  = "project-DEV-by-terraform"
+    prod = "project-PROD-by-terraform"
   }
 }
