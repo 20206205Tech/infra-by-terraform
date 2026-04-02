@@ -21,6 +21,9 @@ data "supabase_pooler" "this" {
   project_ref = each.value.id
 }
 
+
+
+
 resource "supabase_settings" "this" {
   for_each = supabase_project.this
 
@@ -31,11 +34,10 @@ resource "supabase_settings" "this" {
     external_google_client_id = var.doppler_secrets_map["GOOGLE_CLIENT_ID"]
     external_google_secret    = var.doppler_secrets_map["GOOGLE_CLIENT_SECRET"]
 
-
     site_url = "https://20206205.tech"
 
 
-    additional_redirect_urls = [
+    uri_allow_list = [
       "https://20206205.tech/auth/callback",
       "http://localhost:3000/auth/callback"
     ]
