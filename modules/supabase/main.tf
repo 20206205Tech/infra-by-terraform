@@ -40,6 +40,10 @@ data "supabase_pooler" "this" {
   project_ref = each.value.id
 }
 
+
+
+
+
 resource "supabase_settings" "this" {
   for_each = supabase_project.this
 
@@ -50,14 +54,12 @@ resource "supabase_settings" "this" {
     external_google_client_id = var.doppler_secrets_map["GOOGLE_CLIENT_ID"]
     external_google_secret    = var.doppler_secrets_map["GOOGLE_CLIENT_SECRET"]
 
-    # Mặc định luôn về GitHub Pages
-    site_url       = local.project_configs[each.key].site_url
+    site_url = local.project_configs[each.key].site_url
     
-    # Danh sách cho phép (bao gồm chính nó và URL đặc thù của môi trường)
-    # Dùng distinct() để tránh trùng lặp nếu site_url nằm trong allowed_uris
-    uri_allow_list = distinct(concat(
+    # SỬA Ở ĐÂY: Dùng join để biến list thành string cách nhau bởi dấu phẩy
+    uri_allow_list = join(",", distinct(concat(
       [local.project_configs[each.key].site_url],
       local.project_configs[each.key].allowed_uris
-    ))
+    )))
   })
 }
