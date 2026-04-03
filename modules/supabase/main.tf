@@ -1,12 +1,18 @@
 locals {
+  # URL chung bạn muốn dùng làm mặc định cho cả dev và prod
+  default_callback = "https://20206205tech.github.io/auth/callback"
+
   project_configs = {
     "dev" = {
-      site_url     = "http://localhost:3000"
-      redirect_url = "http://localhost:3000/auth/callback"
+      # Khi dev api không có giao diện, vào url sẽ sang trang này
+      site_url      = local.default_callback
+      # Cho phép React redirect về localhost khi cần
+      allowed_uris  = ["http://localhost:3000/auth/callback"]
     }
     "prod" = {
-      site_url     = "https://20206205.tech"
-      redirect_url = "https://20206205.tech/auth/callback"
+      site_url      = local.default_callback
+      # Cho phép React redirect về domain chính khi cần
+      allowed_uris  = ["https://20206205.tech/auth/callback"]
     }
   }
 }
@@ -44,7 +50,14 @@ resource "supabase_settings" "this" {
     external_google_client_id = var.doppler_secrets_map["GOOGLE_CLIENT_ID"]
     external_google_secret    = var.doppler_secrets_map["GOOGLE_CLIENT_SECRET"]
 
+    # Mặc định luôn về GitHub Pages
     site_url       = local.project_configs[each.key].site_url
-    uri_allow_list = local.project_configs[each.key].redirect_url
+    
+    # Danh sách cho phép (bao gồm chính nó và URL đặc thù của môi trường)
+    # Dùng distinct() để tránh trùng lặp nếu site_url nằm trong allowed_uris
+    uri_allow_list = distinct(concat(
+      [local.project_configs[each.key].site_url],
+      local.project_configs[each.key].allowed_uris
+    ))
   })
 }
