@@ -37,6 +37,13 @@ variable "projects" {
     # chat_history
 
 
+    "dev-persona-service",
+    "prod-persona-service",
+
+
+
+
+
     "dev-everything",
     "prod-everything",
 
