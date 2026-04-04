@@ -22,6 +22,10 @@ resource "cloudflare_zero_trust_tunnel_cloudflared_config" "localhost_tunnel_con
     ingress_rule {
       hostname = "dev-data-pipeline-service.${var.domain_name}"
       service  = "http://localhost:30001"
+    }   
+     ingress_rule {
+      hostname = "dev-persona-service.${var.domain_name}"
+      service  = "http://localhost:30002"
     }
 
     ingress_rule {
@@ -44,6 +48,15 @@ resource "cloudflare_record" "localhost_tunnel" {
 resource "cloudflare_record" "data_pipeline_tunnel_dns" {
   zone_id = data.cloudflare_zone.domain.id
   name    = "dev-data-pipeline-service"  
+  type    = "CNAME"
+  content = "${cloudflare_zero_trust_tunnel_cloudflared.localhost_tunnel.id}.cfargotunnel.com"
+  proxied = true
+  ttl     = 1
+}
+
+resource "cloudflare_record" "persona_tunnel_dns" {
+  zone_id = data.cloudflare_zone.domain.id
+  name    = "dev-persona-service"
   type    = "CNAME"
   content = "${cloudflare_zero_trust_tunnel_cloudflared.localhost_tunnel.id}.cfargotunnel.com"
   proxied = true
