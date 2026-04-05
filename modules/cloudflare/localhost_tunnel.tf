@@ -26,6 +26,10 @@ resource "cloudflare_zero_trust_tunnel_cloudflared_config" "localhost_tunnel_con
      ingress_rule {
       hostname = "dev-code-persona-service.${var.domain_name}"
       service  = "http://localhost:30002"
+    }  
+     ingress_rule {
+      hostname = "dev-code-setting-service.${var.domain_name}"
+      service  = "http://localhost:30003"
     }
 
     ingress_rule {
@@ -57,6 +61,15 @@ resource "cloudflare_record" "data_pipeline_tunnel_dns" {
 resource "cloudflare_record" "persona_tunnel_dns" {
   zone_id = data.cloudflare_zone.domain.id
   name    = "dev-code-persona-service"
+  type    = "CNAME"
+  content = "${cloudflare_zero_trust_tunnel_cloudflared.localhost_tunnel.id}.cfargotunnel.com"
+  proxied = true
+  ttl     = 1
+}
+
+resource "cloudflare_record" "setting_tunnel_dns" {
+  zone_id = data.cloudflare_zone.domain.id
+  name    = "dev-code-setting-service"
   type    = "CNAME"
   content = "${cloudflare_zero_trust_tunnel_cloudflared.localhost_tunnel.id}.cfargotunnel.com"
   proxied = true
