@@ -46,6 +46,9 @@ variable "projects" {
     "dev-subscription-service",
     "prod-subscription-service",
 
+    "dev-document-service",
+    "prod-document-service",
+
 
 
 

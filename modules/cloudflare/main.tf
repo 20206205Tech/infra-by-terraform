@@ -30,10 +30,15 @@ resource "cloudflare_record" "api_render" {
 
 
 
-# Lệnh tự động tạo R2 Bucket
-resource "cloudflare_r2_bucket" "vbpl_data" {
+resource "cloudflare_r2_bucket" "dev_documents" {
   account_id = var.doppler_secrets_map["CLOUDFLARE_ACCOUNT_ID"]
-  name       = "user-documents"
+  name       = "dev-documents"
+  location   = "APAC"
+}
+
+resource "cloudflare_r2_bucket" "prod_documents" {
+  account_id = var.doppler_secrets_map["CLOUDFLARE_ACCOUNT_ID"]
+  name       = "prod-documents"
   location   = "APAC"
 }
 
