@@ -40,11 +40,11 @@ variable "projects" {
     "dev-persona-service",
     "prod-persona-service",
 
-
-
-
     "dev-setting-service",
     "prod-setting-service",
+
+    "dev-subscription-service",
+    "prod-subscription-service",
 
 
 
