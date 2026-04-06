@@ -31,6 +31,10 @@ resource "cloudflare_zero_trust_tunnel_cloudflared_config" "localhost_tunnel_con
       hostname = "dev-code-setting-service.${var.domain_name}"
       service  = "http://localhost:30003"
     }
+     ingress_rule {
+      hostname = "dev-code-subscription-service.${var.domain_name}"
+      service  = "http://localhost:30004"
+    }
 
     ingress_rule {
       service = "http_status:404"
@@ -70,6 +74,15 @@ resource "cloudflare_record" "persona_tunnel_dns" {
 resource "cloudflare_record" "setting_tunnel_dns" {
   zone_id = data.cloudflare_zone.domain.id
   name    = "dev-code-setting-service"
+  type    = "CNAME"
+  content = "${cloudflare_zero_trust_tunnel_cloudflared.localhost_tunnel.id}.cfargotunnel.com"
+  proxied = true
+  ttl     = 1
+}
+
+resource "cloudflare_record" "subscription_tunnel_dns" {
+  zone_id = data.cloudflare_zone.domain.id
+  name    = "dev-code-subscription-service"
   type    = "CNAME"
   content = "${cloudflare_zero_trust_tunnel_cloudflared.localhost_tunnel.id}.cfargotunnel.com"
   proxied = true
