@@ -49,6 +49,9 @@ variable "projects" {
     "dev-document-service",
     "prod-document-service",
 
+    "dev-chatbot-service",
+    "prod-chatbot-service",
+
 
 
 
