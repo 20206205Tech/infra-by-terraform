@@ -1,4 +1,6 @@
 resource "langsmith_project" "this" {
-  name        = var.project_name
-  description = "Project được tạo tự động qua Terraform"
+  for_each = var.project_names
+
+  name        = each.key
+  description = "Project ${each.key} được tạo tự động qua Terraform"
 }

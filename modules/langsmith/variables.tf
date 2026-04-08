@@ -3,7 +3,11 @@ variable "doppler_secrets_map" {
   sensitive = true
 }
 
-variable "project_name" {
-  type    = string
-  default = "project-by-terraform"
+variable "project_names" {
+  type        = set(string)
+  description = "Danh sách tên các dự án cần tạo"
+  default = [
+    "project-chatbot-by-terraform",
+    "project-document-by-terraform"
+  ]
 }
