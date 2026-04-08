@@ -77,12 +77,12 @@ output "aiven_kafka_uri" {
 }
 
 # ==========================================
-# LANGSMITH OUTPUTS
-# ==========================================
-output "langsmith_project_id" {
-  value       = module.langsmith.project_id
-  description = "ID của Langsmith project"
-}
+# # LANGSMITH OUTPUTS
+# # ==========================================
+# output "langsmith_project_id" {
+#   value       = module.langsmith.project_id
+#   description = "ID của Langsmith project"
+# }
 
 # ==========================================
 # UPSTASH OUTPUTS
