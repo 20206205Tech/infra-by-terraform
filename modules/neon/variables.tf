@@ -38,7 +38,7 @@ variable "projects" {
 
 
 
-    # chat_history
+    
 
 
     "dev-persona-service",
@@ -55,6 +55,10 @@ variable "projects" {
 
     "dev-chatbot-service",
     "prod-chatbot-service",
+
+
+    "dev-chat-history",
+    "prod-chat-history",
 
 
 
