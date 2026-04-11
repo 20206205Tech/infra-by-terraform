@@ -32,6 +32,10 @@ variable "projects" {
     "prod-data-pipeline-vbpl",
 
 
+    "dev-data-pipeline-phapdien",
+    "prod-data-pipeline-phapdien",
+
+
 
 
     # chat_history
@@ -56,8 +60,8 @@ variable "projects" {
 
 
 
-    "dev-everything",
-    "prod-everything",
+    # "dev-everything",
+    # "prod-everything",
 
   ]
 }
