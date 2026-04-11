@@ -1,6 +1,8 @@
 locals {
-  # URL chung bạn muốn dùng làm mặc định cho cả dev và prod
-  default_callback = "https://20206205tech.github.io"
+  default_callback = "https://20206205tech.github.io/auth-callback"
+
+
+
 
   project_configs = {
     "dev" = {
