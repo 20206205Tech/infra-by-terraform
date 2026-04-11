@@ -5,14 +5,14 @@ locals {
   project_configs = {
     "dev" = {
       # Khi dev api không có giao diện, vào url sẽ sang trang này
-      site_url      = local.default_callback
+      site_url = local.default_callback
       # Cho phép React redirect về localhost khi cần
-      allowed_uris  = ["http://localhost:3000/auth/callback"]
+      allowed_uris = ["http://localhost:3000/auth/callback"]
     }
     "prod" = {
-      site_url      = local.default_callback
+      site_url = local.default_callback
       # Cho phép React redirect về domain chính khi cần
-      allowed_uris  = ["https://20206205.tech/auth/callback"]
+      allowed_uris = ["https://20206205.tech/auth/callback"]
     }
   }
 }
@@ -48,15 +48,16 @@ resource "supabase_settings" "this" {
   project_ref = each.value.id
 
   auth = jsonencode({
-    # Thêm cấu hình thời gian token (ví dụ: 7200 giây = 2 giờ)
-    jwt_exp = 7200
-    
+    # Mặc định là 1 giờ
+    # Thêm cấu hình thời gian token (12 giờ = 43200 giây)
+    jwt_exp = 43200
+
     external_google_enabled   = true
     external_google_client_id = var.doppler_secrets_map["GOOGLE_CLIENT_ID"]
     external_google_secret    = var.doppler_secrets_map["GOOGLE_CLIENT_SECRET"]
 
     site_url = local.project_configs[each.key].site_url
-    
+
     # Dùng join để biến list thành string cách nhau bởi dấu phẩy
     uri_allow_list = join(",", distinct(concat(
       [local.project_configs[each.key].site_url],
