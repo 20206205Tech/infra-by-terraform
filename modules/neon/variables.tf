@@ -64,8 +64,8 @@ variable "projects" {
 
 
 
-    # "dev-everything",
-    # "prod-everything",
+    "dev-everything",
+    "prod-everything",
 
   ]
 }
