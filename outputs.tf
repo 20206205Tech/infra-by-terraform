@@ -54,13 +54,13 @@ output "cloudflare_localhost_tunnel_token" {
 #   description = "Danh sách ID của các cluster MongoDB"
 # }
 
-# ==========================================
-# NEON OUTPUTS
-# ==========================================
-output "neon_projects" {
-  value       = module.neon.neon_project_ids
-  description = "Danh sách ID của các databases trên Neon"
-}
+# # ==========================================
+# # NEON OUTPUTS
+# # ==========================================
+# output "neon_projects" {
+#   value       = module.neon.neon_project_ids
+#   description = "Danh sách ID của các databases trên Neon"
+# }
 
 # ==========================================
 # AIVEN OUTPUTS

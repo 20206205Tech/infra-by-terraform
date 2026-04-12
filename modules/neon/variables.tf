@@ -62,11 +62,11 @@ variable "projects" {
 
 
 
-    # "dev-setting-service",
-    # "prod-setting-service",
+    "dev-setting-service",
+    "prod-setting-service",
 
-    # "dev-everything",
-    # "prod-everything",
+    "dev-everything",
+    "prod-everything",
 
   ]
 }
