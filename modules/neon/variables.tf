@@ -61,6 +61,8 @@ variable "projects" {
 
 
 
+    "dev-conversation-service",
+    "prod-conversation-service",
 
     "dev-everything",
     "prod-everything",
