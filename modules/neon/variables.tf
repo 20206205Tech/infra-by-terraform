@@ -38,14 +38,12 @@ variable "projects" {
 
 
 
-    
+
 
 
     "dev-persona-service",
     "prod-persona-service",
 
-    "dev-setting-service",
-    "prod-setting-service",
 
     "dev-subscription-service",
     "prod-subscription-service",
@@ -64,8 +62,11 @@ variable "projects" {
 
 
 
-    "dev-everything",
-    "prod-everything",
+    # "dev-setting-service",
+    # "prod-setting-service",
+
+    # "dev-everything",
+    # "prod-everything",
 
   ]
 }
