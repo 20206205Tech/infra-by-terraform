@@ -64,6 +64,9 @@ variable "projects" {
     "dev-conversation-service",
     "prod-conversation-service",
 
+    "dev-payment-service",
+    "prod-payment-service",
+
     # "dev-everything",
     # "prod-everything",
 
