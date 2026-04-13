@@ -62,21 +62,21 @@ output "cloudflare_localhost_tunnel_token" {
 #   description = "Danh sách ID của các databases trên Neon"
 # }
 
-# ==========================================
-# AIVEN OUTPUTS
-# ==========================================
-output "aiven_kafka_project" {
-  value       = module.aiven.kafka_project_name
-  description = "Tên Aiven Project chứa Kafka"
-}
+# # ==========================================
+# # AIVEN OUTPUTS
+# # ==========================================
+# output "aiven_kafka_project" {
+#   value       = module.aiven.kafka_project_name
+#   description = "Tên Aiven Project chứa Kafka"
+# }
 
-output "aiven_kafka_uri" {
-  value       = module.aiven.kafka_service_uri
-  description = "URI kết nối Kafka"
-  sensitive   = true
-}
+# output "aiven_kafka_uri" {
+#   value       = module.aiven.kafka_service_uri
+#   description = "URI kết nối Kafka"
+#   sensitive   = true
+# }
 
-# ==========================================
+# # ==========================================
 # # LANGSMITH OUTPUTS
 # # ==========================================
 # output "langsmith_project_id" {
