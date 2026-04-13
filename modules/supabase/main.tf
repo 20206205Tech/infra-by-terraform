@@ -25,7 +25,7 @@ resource "supabase_project" "this" {
   organization_id   = var.doppler_secrets_map["SUPABASE_ORGANIZATION_ID"]
   name              = each.value
   database_password = var.doppler_secrets_map["SUPABASE_DB_PASSWORD"]
-  region            = var.doppler_secrets_map["SUPABASE_REGION"]
+  region            = "ap-southeast-1"
 
   lifecycle {
     ignore_changes = [database_password]
