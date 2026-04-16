@@ -13,8 +13,8 @@ resource "aiven_kafka" "kafka_srv" {
 
   kafka_user_config {
     kafka_version   = "4.1"
-    kafka_rest    = true
-    kafka_connect = false
+    kafka_rest      = true
+    kafka_connect   = false
     schema_registry = true
 
 
@@ -38,13 +38,13 @@ resource "aiven_kafka" "kafka_srv" {
 
 
 
-resource "aiven_kafka_topic" "chat_topic" {
-  project      = aiven_project.this.project
-  service_name = aiven_kafka.kafka_srv.service_name
-  topic_name   = "chat-events"
-  partitions   = 1
-  replication  = 2  
-}
+# resource "aiven_kafka_topic" "chat_topic" {
+#   project      = aiven_project.this.project
+#   service_name = aiven_kafka.kafka_srv.service_name
+#   topic_name   = "chat-events"
+#   partitions   = 1
+#   replication  = 2  
+# }
 
 
 
@@ -56,6 +56,6 @@ resource "aiven_kafka_topic" "payment_topic" {
   service_name = aiven_kafka.kafka_srv.service_name
   topic_name   = "payment-events"
   partitions   = 1
-  replication  = 2  
+  replication  = 2
 }
 
