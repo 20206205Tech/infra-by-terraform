@@ -42,3 +42,15 @@ resource "cloudflare_r2_bucket" "prod_documents" {
   location   = "APAC"
 }
 
+resource "cloudflare_r2_bucket" "dev_share" {
+  account_id = var.doppler_secrets_map["CLOUDFLARE_ACCOUNT_ID"]
+  name       = "dev-share"
+  location   = "APAC"
+}
+
+resource "cloudflare_r2_bucket" "prod_share" {
+  account_id = var.doppler_secrets_map["CLOUDFLARE_ACCOUNT_ID"]
+  name       = "prod-share"
+  location   = "APAC"
+}
+
