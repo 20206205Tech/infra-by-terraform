@@ -10,7 +10,7 @@ variable "domain_name" {
   default     = "20206205.tech"
 }
 
-# variable "heroku_dns_target" {
-#   type        = string
-#   description = "CNAME target lấy tự động từ Heroku"
-# }
+variable "heroku_dns_target" {
+  type        = string
+  description = "CNAME target lấy tự động từ Heroku"
+}

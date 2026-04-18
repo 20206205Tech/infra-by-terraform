@@ -6,7 +6,7 @@ variable "doppler_secrets_map" {
 
 variable "app_name" {
   type    = string
-  default = "code-be-ai"
+  default = "code-payment-service"
 }
 
 variable "app_region" {
@@ -21,12 +21,12 @@ variable "app_stack" {
 
 variable "domain_name" {
   type    = string
-  default = "be-ai.20206205.tech"
+  default = "code-payment-service.20206205.tech"
 }
 
 variable "github_org_repo" {
   type    = string
-  default = "20206205Tech/code-be-ai"
+  default = "20206205Tech/code-payment-service"
 }
 
 variable "github_branch" {
