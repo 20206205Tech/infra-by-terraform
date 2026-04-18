@@ -27,8 +27,8 @@ resource "herokux_pipeline_github_integration" "this" {
 resource "herokux_app_github_integration" "this" {
   app_id      = heroku_app.this.uuid
   branch      = var.github_branch
-  auto_deploy = false
-  wait_for_ci = false
+  auto_deploy = true
+  wait_for_ci = true 
 
   depends_on = [
     heroku_pipeline_coupling.this,
