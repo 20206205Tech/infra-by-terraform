@@ -136,13 +136,22 @@ resource "oci_core_default_security_list" "generated_oci_core_default_security_l
     }
   }
 
-  # Mở cổng 8080 (Keycloak)
+  # # Mở cổng 8080 (Keycloak)
+  # ingress_security_rules {
+  #   protocol = "6" # Giao thức TCP
+  #   source   = "0.0.0.0/0"
+  #   tcp_options {
+  #     max = 8080
+  #     min = 8080
+  #   }
+  # }
+
   ingress_security_rules {
-    protocol = "6" # Giao thức TCP
+    protocol = "6" # TCP
     source   = "0.0.0.0/0"
     tcp_options {
-      max = 8080
-      min = 8080
+      max = 8000
+      min = 8000
     }
   }
 
