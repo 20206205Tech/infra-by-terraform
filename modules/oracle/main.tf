@@ -54,7 +54,7 @@ resource "oci_core_instance" "generated_oci_core_instance" {
     assign_ipv6ip             = "false"
     assign_private_dns_record = "true"
     assign_public_ip          = "true"
-    display_name              = "vps"
+    display_name              = "vps-oracle-free"
     subnet_id                 = oci_core_subnet.generated_oci_core_subnet.id
   }
   display_name = "instance-20260326-2228"
